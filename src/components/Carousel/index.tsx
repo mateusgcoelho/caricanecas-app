@@ -6,13 +6,14 @@ import { Container, Content, Controllers, ButtonController } from "./styles";
 
 interface CarouselProps {
   data: any;
-  component: React.FC;
+  component: React.FC<any>;
 }
 
 const Carousel: React.FC<CarouselProps> = ({
   data,
   component: Component,
-}: any) => {
+  ...props
+}: CarouselProps) => {
   const carouselItemsRef = useRef<HTMLDivElement>(null);
 
   const handleLeftClick = (event: FormEvent) => {
@@ -32,7 +33,7 @@ const Carousel: React.FC<CarouselProps> = ({
   };
 
   return (
-    <Container>
+    <Container {...props}>
       <Content ref={carouselItemsRef}>
         {data.map((item: any) => (
           <Component item={item} key={item.id}>

@@ -17,6 +17,7 @@ import {
   AboutChoose,
   ButtonToBack,
 } from "./styles";
+import SizedBox from "../SizedBox";
 
 const ChooseCaricature: React.FC = () => {
   return (
@@ -49,7 +50,11 @@ const ChooseCaricature: React.FC = () => {
           <h1>Você precisa de quantas pessoas desenhadas?</h1>
         </AboutChoose>
 
+        <SizedBox />
+
         <Carousel data={CARICATURES_DATA} component={CaricatureItem} />
+
+        <SizedBox />
       </Choose>
     </Content>
   );
