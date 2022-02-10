@@ -46,4 +46,11 @@ export default createGlobalStyle`
       cursor: pointer;
       background: none;
     }
+
+    a {
+      display: block;
+      color: var(--white);
+
+      text-decoration: none;
+    }
 `;
