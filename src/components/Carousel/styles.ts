@@ -8,7 +8,6 @@ export const Container = styled.section`
 
 export const Content = styled.div`
   width: 100%;
-  height: 15rem;
 
   padding: 0 1rem;
 
@@ -25,21 +24,9 @@ export const Content = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
-`;
 
-export const Item = styled.button`
-  flex: none;
-  width: 15rem;
-  height: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid var(--green);
-
-  & + & {
-    margin-left: 1rem;
+  div + div {
+    margin-left: 2rem;
   }
 `;
 
