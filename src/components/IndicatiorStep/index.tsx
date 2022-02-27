@@ -12,10 +12,7 @@ const IndicatorStep: React.FC<IndicatorStepProps> = ({
   stepNumber,
   finalStepNumber,
 }) => {
-  const [progressBarPercent, setProgressBarPercent] = useState(() => {
-    // 100% - finalStepNumber
-    // x - stepNumber
-    console.log((stepNumber * 100) / finalStepNumber);
+  const [progressBarPercent, _] = useState(() => {
     return (stepNumber * 100) / finalStepNumber;
   });
 
