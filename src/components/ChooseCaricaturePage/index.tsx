@@ -19,7 +19,7 @@ import {
 } from "./styles";
 import SizedBox from "../SizedBox";
 
-const ChooseCaricature: React.FC = () => {
+const ChooseCaricaturePage: React.FC = () => {
   return (
     <Content>
       <Header>
@@ -60,4 +60,4 @@ const ChooseCaricature: React.FC = () => {
   );
 };
 
-export default ChooseCaricature;
+export default ChooseCaricaturePage;
