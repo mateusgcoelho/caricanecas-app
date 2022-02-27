@@ -40,7 +40,7 @@ const ChooseCaricature: React.FC = () => {
           </AboutPageTopBar>
 
           <AboutPageContent>
-            <IndicatorStep />
+            <IndicatorStep stepNumber={1} finalStepNumber={2} />
           </AboutPageContent>
         </AboutPage>
       </Header>

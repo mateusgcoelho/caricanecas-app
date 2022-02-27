@@ -10,8 +10,12 @@ export const Container = styled.div`
   background: ${lighten(0.3, "#a8c828")};
 `;
 
-export const Completed = styled.div`
-  width: 2rem;
+type CompletedProps = {
+  percentCompleted: number;
+};
+
+export const Completed = styled.div<CompletedProps>`
+  width: ${(props) => props.percentCompleted}%;
   height: 100%;
 
   background: var(--green);
