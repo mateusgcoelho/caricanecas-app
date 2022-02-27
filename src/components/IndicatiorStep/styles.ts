@@ -19,7 +19,7 @@ export const IndicatorCircle = styled.div`
 
   border-radius: 50%;
 
-  border: 6px solid var(--green);
+  border: 6px solid var(--primary);
 
   display: flex;
   align-items: center;

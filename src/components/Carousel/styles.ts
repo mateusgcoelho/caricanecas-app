@@ -42,8 +42,8 @@ export const Controllers = styled.section`
 `;
 
 export const ButtonController = styled.button`
-  height: 3.4rem;
-  width: 3.4rem;
+  height: 3.2rem;
+  width: 3.2rem;
 
   border-radius: 50%;
 
@@ -53,8 +53,6 @@ export const ButtonController = styled.button`
 
   padding: 1rem 0;
 
-  color: var(--lighter);
-  font-size: 1.2rem;
-
-  border: 1px solid var(--lighter);
+  color: var(--primary);
+  font-size: 1rem;
 `;
