@@ -8,6 +8,8 @@ export const Content = styled.article`
 
   align-items: center;
 
+  transition: all 0.2s;
+
   h2 {
     margin-top: 1rem;
   }

@@ -1,31 +1,24 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { IState } from "../../store";
+import { IStepItem, IStepState } from "../../store/modules/step/types";
 import ProgressBar from "../ProgressBar";
 
 import { Content, IndicatorCircle } from "./styles";
 
-type IndicatorStepProps = {
-  stepNumber: number;
-  finalStepNumber: number;
-};
-
-const IndicatorStep: React.FC<IndicatorStepProps> = ({
-  stepNumber,
-  finalStepNumber,
-}) => {
-  const [progressBarPercent, _] = useState(() => {
-    return (stepNumber * 100) / finalStepNumber;
-  });
+const IndicatorStep: React.FC = () => {
+  const step = useSelector<IState, IStepState>((state) => state.step);
 
   return (
     <Content>
       <IndicatorCircle>
-        <h1>{stepNumber}</h1>
+        <h1>{step.selected.number}</h1>
       </IndicatorCircle>
 
-      <h2>PASSO {stepNumber}</h2>
+      <h2>PASSO {step.selected.number}</h2>
 
       <ProgressBar
-        percentCompleted={progressBarPercent}
+        percentCompleted={(step.selected.number * 100) / step.steps.length}
         style={{ marginTop: "2rem" }}
       />
     </Content>

@@ -12,6 +12,7 @@ export const Container = styled.header`
 
 export const VideoWrapper = styled.section`
   width: 100%;
+  background: var(--light);
 
   position: absolute;
   top: 0;
@@ -29,6 +30,10 @@ export const VideoWrapper = styled.section`
 `;
 
 export const AboutPage = styled.section`
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
   position: absolute;
   top: 0;
   right: 0;
@@ -56,6 +61,17 @@ export const AboutPageContent = styled.div`
   width: 100%;
 
   padding: 0 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 240px;
+    margin: 2rem auto;
+    margin-bottom: 3rem;
+  }
 `;
 
 export const ButtonToBack = styled(Link)`

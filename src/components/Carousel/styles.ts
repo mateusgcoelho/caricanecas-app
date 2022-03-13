@@ -1,19 +1,23 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
+  position: relative;
   width: 100%;
+  height: 220px;
 
   margin: 0 auto;
 `;
 
 export const Content = styled.div`
   width: 100%;
+  margin: 0 auto;
 
   padding: 0 1rem;
 
   overflow-x: auto;
 
   display: flex;
+  justify-content: space-between;
   align-items: center;
 
   scroll-behavior: smooth;
@@ -25,20 +29,22 @@ export const Content = styled.div`
     display: none;
   }
 
-  div + div {
+  button + button {
     margin-left: 2rem;
   }
 `;
 
 export const Controllers = styled.section`
-  max-width: 220px;
-  margin: 0 auto;
+  position: absolute;
+  top: 56px;
+  left: 0;
+  right: 0;
+
+  width: 100%;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-
-  padding: 2rem 1rem;
 `;
 
 export const ButtonController = styled.button`
@@ -53,6 +59,6 @@ export const ButtonController = styled.button`
 
   padding: 1rem 0;
 
-  color: var(--primary);
+  color: var(--light-blue);
   font-size: 1rem;
 `;

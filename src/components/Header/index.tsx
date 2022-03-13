@@ -1,4 +1,8 @@
+import LogoCaricanecas from "../../assets/logo.png";
+
 import IndicatorStep from "../IndicatiorStep";
+
+import { Content } from "../../styles/GlobalStyles";
 
 import {
   Container,
@@ -13,21 +17,23 @@ type HeaderProps = {
   video: {
     url: string;
   };
+  logoIsVisible?: boolean;
   navigationTo?: {
     textComponent: () => {};
     path: string;
   };
 };
 
-const Header: React.FC<HeaderProps> = ({ video, navigationTo }) => {
+const Header: React.FC<HeaderProps> = ({
+  video,
+  navigationTo,
+  logoIsVisible = true,
+}) => {
   return (
     <Container>
       <VideoWrapper>
-        <video autoPlay loop>
-          <source src={video.url} type="video/mp4" />
-        </video>
+        {/* <video autoPlay loop src={video.url} /> */}
       </VideoWrapper>
-
       <AboutPage>
         {!!navigationTo && (
           <AboutPageTopBar>
@@ -38,7 +44,10 @@ const Header: React.FC<HeaderProps> = ({ video, navigationTo }) => {
         )}
 
         <AboutPageContent>
-          <IndicatorStep stepNumber={1} finalStepNumber={2} />
+          {logoIsVisible && (
+            <img src={LogoCaricanecas} alt="Logo Caricanecas" />
+          )}
+          <IndicatorStep />
         </AboutPageContent>
       </AboutPage>
     </Container>

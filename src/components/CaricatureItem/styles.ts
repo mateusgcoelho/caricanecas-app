@@ -1,9 +1,15 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+type ContainerProps = {
+  isSelected?: boolean;
+};
+
+export const Container = styled.button<ContainerProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  opacity: ${({ isSelected }) => (isSelected ? 1 : 0.7)};
 
   img {
     height: 10rem;

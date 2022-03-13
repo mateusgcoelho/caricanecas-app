@@ -18,5 +18,6 @@ export const Completed = styled.div<CompletedProps>`
   width: ${(props) => props.percentCompleted}%;
   height: 100%;
 
+  transition: all 0.2s;
   background: var(--primary);
 `;
