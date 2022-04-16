@@ -1,5 +1,3 @@
-import { IStepItem } from "./types";
-
 const nextStepSelected = () => {
   return {
     type: "NEXT_STEP_SELECTED",
@@ -7,4 +5,12 @@ const nextStepSelected = () => {
   };
 };
 
-export { nextStepSelected };
+const previousStepSelected = () => {
+  return {
+    type: "PREVIOUS_STEP_SELECTED",
+    payload: {},
+  };
+};
+
+export { previousStepSelected, nextStepSelected };
+

@@ -1,44 +1,46 @@
+import { useDispatch } from "react-redux";
 import LogoCaricanecas from "../../assets/logo.png";
-
+import { previousStepSelected } from "../../store/modules/step/actions";
 import IndicatorStep from "../IndicatiorStep";
-
-import { Content } from "../../styles/GlobalStyles";
-
 import {
-  Container,
-  VideoWrapper,
-  AboutPage,
-  AboutPageTopBar,
-  AboutPageContent,
-  ButtonToBack,
+  AboutPage, AboutPageContent, AboutPageTopBar, ButtonToBack, Container,
+  VideoWrapper
 } from "./styles";
+
+
+
 
 type HeaderProps = {
   video: {
     url: string;
   };
   logoIsVisible?: boolean;
-  navigationTo?: {
+  backTo?: {
     textComponent: () => {};
-    path: string;
   };
 };
 
 const Header: React.FC<HeaderProps> = ({
   video,
-  navigationTo,
+  backTo,
   logoIsVisible = true,
 }) => {
+  const dispatch = useDispatch();
+
+  const handleClickToBackStep = () => {
+    dispatch(previousStepSelected());
+  };
+
   return (
     <Container>
       <VideoWrapper>
-        {/* <video autoPlay loop src={video.url} /> */}
+        <video autoPlay loop src={video.url} />
       </VideoWrapper>
       <AboutPage>
-        {!!navigationTo && (
+        {!!backTo && (
           <AboutPageTopBar>
-            <ButtonToBack to={navigationTo.path}>
-              {navigationTo.textComponent()}
+            <ButtonToBack onClick={handleClickToBackStep}>
+              {backTo.textComponent()}
             </ButtonToBack>
           </AboutPageTopBar>
         )}

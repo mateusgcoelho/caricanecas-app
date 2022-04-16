@@ -1,13 +1,12 @@
-import { Link } from "react-router-dom";
-
 import styled from "styled-components";
+
 
 export const Container = styled.header`
   position: relative;
 
   width: 100%;
 
-  height: 26rem;
+  height: 28rem;
 `;
 
 export const VideoWrapper = styled.section`
@@ -45,16 +44,18 @@ export const AboutPage = styled.section`
 
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
 
   color: var(--white);
 `;
 
 export const AboutPageTopBar = styled.header`
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  padding: 1rem 0;
 `;
 
 export const AboutPageContent = styled.div`
@@ -70,12 +71,17 @@ export const AboutPageContent = styled.div`
   img {
     width: 240px;
     margin: 2rem auto;
-    margin-bottom: 3rem;
   }
 `;
 
-export const ButtonToBack = styled(Link)`
+export const ButtonToBack = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  color: var(--white);
+
+  font-size: 1.2rem;
+
 `;
+
